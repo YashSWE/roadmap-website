@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+#prompts
+ai-engineer-roadmap.md
+behumoury-brand-guidelines-v1.1.md
+AGENTS.md
+CLAUDE.md
+prompt-for the-roadmap-websote.md
