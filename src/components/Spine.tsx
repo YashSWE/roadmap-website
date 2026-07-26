@@ -181,7 +181,7 @@ export function Spine() {
                     transition={{ duration: 0.4, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="flex flex-col gap-12 lg:gap-16 pb-4">
+                    <div className="flex flex-col gap-12 lg:gap-16 pb-8">
                       {blockChapters.map((ch) => (
                         <div key={ch.number} className="flex flex-row items-start" id={`chapter-${ch.number}`}>
                           {/* Node Column */}
@@ -191,36 +191,18 @@ export function Spine() {
                           
                           {/* Content Column */}
                           <div className="flex-grow pl-4 lg:pl-12 lg:w-10/12">
-                            <div className="relative w-full max-w-md lg:max-w-none lg:w-2/3">
-                              <ChapterCard chapter={ch} />
-                              {ch.number === 1 && showStartHere && (
-                                <div className="absolute -right-4 -bottom-4 lg:-right-8 lg:-bottom-6 z-30">
-                                  <Sticker type="START HERE →" />
-                                </div>
-                              )}
+                            <div className="w-full max-w-md lg:max-w-none lg:w-2/3">
+                              <div className="relative">
+                                <ChapterCard chapter={ch} />
+                                {ch.number === 1 && showStartHere && (
+                                  <div className="absolute -right-3 -bottom-3 lg:-right-4 lg:-bottom-4 z-30 pointer-events-none">
+                                    <Sticker type="START HERE →" />
+                                  </div>
+                                )}
+                              </div>
                               
                               {ch.number === 1 && (
                                 <div className="mt-12 flex flex-col gap-12">
-                                  {/* How to Use */}
-                                  <div>
-                                    <h3 className="font-display text-2xl md:text-3xl text-[#0A0A0A] uppercase tracking-[-0.01em] mb-6">
-                                      HOW TO USE
-                                    </h3>
-                                    <div className="flex flex-col gap-6 font-sans text-sm md:text-base text-[#0A0A0A]/80">
-                                      <div className="flex gap-4 items-start">
-                                        <div className="font-mono text-sm mt-1 shrink-0">[01]</div>
-                                        <div><strong className="text-[#0A0A0A] font-medium">READ</strong> — every chapter is live in full right now; the video companion lands periodically as the roadmap progresses.</div>
-                                      </div>
-                                      <div className="flex gap-4 items-start">
-                                        <div className="font-mono text-sm mt-1 shrink-0">[02]</div>
-                                        <div><strong className="text-[#0A0A0A] font-medium">BUILD</strong> — every chapter ends in an on-screen build; do it, don't just read it.</div>
-                                      </div>
-                                      <div className="flex gap-4 items-start">
-                                        <div className="font-mono text-sm mt-1 shrink-0">[03]</div>
-                                        <div><strong className="text-[#0A0A0A] font-medium">CHECK IT OFF</strong> — tick a topic when you can explain it out loud; progress saves in this browser.</div>
-                                      </div>
-                                    </div>
-                                  </div>
                                   {/* Already on channel */}
                                   <div>
                                     <h3 className="font-display text-2xl md:text-3xl text-[#0A0A0A] uppercase tracking-[-0.01em] mb-6">
@@ -228,14 +210,25 @@ export function Spine() {
                                     </h3>
                                     <div className="flex flex-col gap-3 font-mono text-xs uppercase tracking-widest text-[#0A0A0A]">
                                       {[
-                                        { title: "What is an AI Engineer — roles & responsibilities", url: "#" },
-                                        { title: "AI Engineer vs ML Engineer", url: "#" },
-                                        { title: "Interview experience — what companies actually ask", url: "#" }
+                                        {
+                                          title: "WHAT IS AN AI ENGINEER IN 2026 — ROLES & RESPONSIBILITIES (AI ENGINEER VS ML ENGINEER)",
+                                          url: "https://youtu.be/dFqoGziiObM"
+                                        },
+                                        {
+                                          title: "INTERVIEW EXPERIENCE — WHAT COMPANIES ACTUALLY ASK",
+                                          url: "https://youtu.be/O4du2us37Qk"
+                                        }
                                       ].map((vid, i) => (
-                                        <div key={i} className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-4 bg-[#FFFFFF] border border-[#0A0A0A]">
-                                          <span className="truncate">{vid.title}</span>
-                                          <a href={vid.url} className="shrink-0 text-[#3D5AFE] hover:underline">WATCH ↗</a>
-                                        </div>
+                                        <a
+                                          key={i}
+                                          href={vid.url}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          className="group flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 bg-[#FFFFFF] border border-[#0A0A0A] transition-all hover:-translate-x-[2px] hover:-translate-y-[2px] hover:shadow-[4px_4px_0_#0A0A0A]"
+                                        >
+                                          <span className="leading-snug">{vid.title}</span>
+                                          <span className="shrink-0 text-[#3D5AFE] group-hover:underline font-bold">WATCH ↗</span>
+                                        </a>
                                       ))}
                                     </div>
                                     <div className="mt-4 font-mono text-[10px] uppercase text-[#0A0A0A]/50 tracking-widest">

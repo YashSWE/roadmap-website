@@ -64,13 +64,16 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
         {/* Video Slot */}
         <section>
           {chapter.status === "published" && chapter.youtubeId ? (
-            <div className="w-full aspect-video border border-[#0A0A0A] bg-[#0A0A0A] shadow-[4px_4px_0_#0A0A0A] relative flex items-center justify-center cursor-pointer group">
-              <a href={`https://youtube.com/watch?v=${chapter.youtubeId}`} target="_blank" rel="noopener noreferrer" className="absolute inset-0 flex flex-col items-center justify-center">
-                <div className="w-16 h-12 bg-[#FF0000] flex items-center justify-center rounded-lg mb-2">
-                  <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1"></div>
-                </div>
-                <p className="font-mono text-[#FFFFFF] text-xs">WATCH ON YOUTUBE</p>
-              </a>
+            <div className="w-full aspect-video border border-[#0A0A0A] bg-[#0A0A0A] shadow-[4px_4px_0_#0A0A0A] overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src={`https://www.youtube.com/embed/${chapter.youtubeId}`}
+                title={chapter.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
             </div>
           ) : (
             <div className="border border-[#0A0A0A] bg-[#0A0A0A] text-[#FFFFFF] p-6 shadow-[4px_4px_0_#0A0A0A] flex flex-col md:flex-row md:items-center justify-between gap-6">
