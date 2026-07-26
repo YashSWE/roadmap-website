@@ -15,11 +15,8 @@ export function Footer() {
           <Link href="https://youtube.com/@behumoury" target="_blank" rel="noopener noreferrer" className="hover:text-[#3D5AFE] hover:drop-shadow-[0_0_8px_#3D5AFE] transition-all">
             YOUTUBE ↗
           </Link>
-          <Link href="https://instagram.com/behumoury" target="_blank" rel="noopener noreferrer" className="hover:text-[#3D5AFE] hover:drop-shadow-[0_0_8px_#3D5AFE] transition-all">
+          <Link href="https://www.instagram.com/behumoury/" target="_blank" rel="noopener noreferrer" className="hover:text-[#3D5AFE] hover:drop-shadow-[0_0_8px_#3D5AFE] transition-all">
             INSTAGRAM ↗
-          </Link>
-          <Link href="https://github.com/YashSWE" target="_blank" rel="noopener noreferrer" className="hover:text-[#3D5AFE] hover:drop-shadow-[0_0_8px_#3D5AFE] transition-all">
-            GITHUB ↗
           </Link>
           <Link href="https://behumoury.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#3D5AFE] hover:drop-shadow-[0_0_8px_#3D5AFE] transition-all">
             PORTFOLIO ↗
