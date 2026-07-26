@@ -38,21 +38,21 @@ export function Minimap() {
             </h3>
             <div className="bg-[#FFFFFF] border border-[#0A0A0A] p-6 shadow-[4px_4px_0_#0A0A0A]">
               <ul className="flex flex-col gap-4 font-mono text-xs uppercase tracking-widest text-[#0A0A0A]">
-                <li className="flex items-center gap-3">
-                  <span className="w-1.5 h-1.5 bg-[#C6FF3F] border border-[#0A0A0A]" />
-                  Python (Intermediate)
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 bg-[#C6FF3F] border border-[#0A0A0A] mt-1 shrink-0" />
+                  <span>Python (Intermediate)</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-1.5 h-1.5 bg-[#C6FF3F] border border-[#0A0A0A]" />
-                  Basic frontend + backend fundamentals
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 bg-[#C6FF3F] border border-[#0A0A0A] mt-1 shrink-0" />
+                  <span>Software Engineering Concepts (e.g. APIs, HTTP Protocols)</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-1.5 h-1.5 bg-[#C6FF3F] border border-[#0A0A0A]" />
-                  General SDLC best practices
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 bg-[#C6FF3F] border border-[#0A0A0A] mt-1 shrink-0" />
+                  <span>Programming Fundamentals (e.g. OOP, Functional Programming)</span>
                 </li>
               </ul>
-              <p className="mt-6 font-sans text-sm text-[#0A0A0A]/70">
-                Learn these simultaneously if you don't have them — they don't block the roadmap.
+              <p className="mt-6 font-sans text-sm text-[#0A0A0A]/70 leading-relaxed">
+                You should have a basic working knowledge of software engineering fundamentals (including terms like APIs, HTTP protocols, OOP, and functional programming). Learn these alongside the roadmap if you need a refresh — they won't block you from starting.
               </p>
             </div>
           </div>
