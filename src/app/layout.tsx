@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Anton, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import { ProgressProvider } from "@/components/ProgressProvider";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const anton = Anton({
@@ -78,6 +79,7 @@ export default function RootLayout({
         <ProgressProvider>
           {children}
         </ProgressProvider>
+        <Analytics />
       </body>
     </html>
   );
