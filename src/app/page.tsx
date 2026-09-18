@@ -67,7 +67,7 @@ function HeroContent() {
 
         {/* Body */}
         <p className="font-sans text-lg md:text-xl text-[#FFFFFF]/80 max-w-[60ch] mb-10 leading-relaxed">
-          The full application layer across 5 blocks. 12 chapters. Every chapter maps to a real interview question or something I use on the job. Videos drop periodically as the roadmap progresses. You can follow along or you can start now with the free resources online.
+          The full application layer across 5 blocks. 12 chapters. Every chapter maps to a real interview question or something I use on the job. You can follow along or you can start now with the free resources online.
         </p>
 
         {/* Buttons */}
@@ -359,35 +359,6 @@ function ProgressModule() {
 
 
 
-function CTABand() {
-  return (
-    <section className="w-full bg-[#0A0A0A] text-[#FFFFFF] py-24 relative overflow-hidden">
-      <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center relative z-10 flex flex-col items-center">
-        <div className="relative inline-block mb-8">
-          <h2 className="font-display text-5xl md:text-7xl uppercase tracking-[-0.01em] leading-[0.85]">
-            THE VIDEOS DROP ON YOUTUBE.
-          </h2>
-          <div className="absolute -top-4 -left-4 md:-left-8">
-            <Sticker type="100% FREE" rotation={-6} />
-          </div>
-        </div>
-
-        <p className="font-sans text-lg md:text-xl text-[#FFFFFF]/80 max-w-[50ch] mb-10 leading-relaxed">
-          The chapters are all here already. No email list; subscribing is the notification system.
-        </p>
-
-        <Link
-          href="https://youtube.com/@behumoury?sub_confirmation=1"
-          target="_blank" rel="noopener noreferrer"
-          className="inline-flex items-center justify-center bg-[#C6FF3F] text-[#0A0A0A] font-mono text-sm uppercase tracking-widest px-8 py-5 border border-[#0A0A0A] shadow-[4px_4px_0_#C6FF3F] hover:shadow-[2px_2px_0_#C6FF3F] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
-        >
-          SUBSCRIBE ↗
-        </Link>
-      </div>
-    </section>
-  );
-}
-
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-[#F3F1EA] w-full">
@@ -395,7 +366,6 @@ export default function Home() {
       <ProgressModule />
       <Minimap />
       <Spine />
-      <CTABand />
       <Footer />
     </main>
   );

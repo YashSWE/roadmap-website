@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Anton, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import { ProgressProvider } from "@/components/ProgressProvider";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import "./globals.css";
 
 const anton = Anton({
@@ -58,6 +59,13 @@ export default function RootLayout({
       lang="en"
       className={`${anton.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
+      <head>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2713433234611131"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <script
           type="application/ld+json"

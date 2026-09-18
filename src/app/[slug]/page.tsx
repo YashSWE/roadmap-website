@@ -62,8 +62,8 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
         </header>
 
         {/* Video Slot */}
-        <section>
-          {chapter.status === "published" && chapter.youtubeId ? (
+        {chapter.status === "published" && chapter.youtubeId && (
+          <section>
             <div className="w-full aspect-video border border-[#0A0A0A] bg-[#0A0A0A] shadow-[4px_4px_0_#0A0A0A] overflow-hidden">
               <iframe
                 className="w-full h-full"
@@ -75,22 +75,8 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
                 allowFullScreen
               />
             </div>
-          ) : (
-            <div className="border border-[#0A0A0A] bg-[#0A0A0A] text-[#FFFFFF] p-6 shadow-[4px_4px_0_#0A0A0A] flex flex-col md:flex-row md:items-center justify-between gap-6">
-              <div className="flex flex-col gap-2 max-w-xl">
-                <h2 className="font-anton text-3xl uppercase tracking-tight">
-                  {chapter.status === "coming-soon" && chapter.publishDate ? `VIDEO DROPS ${new Date(chapter.publishDate).toLocaleString("default", { month: "short" }).toUpperCase()} ${new Date(chapter.publishDate).getDate()}` : "VIDEO IN PRODUCTION"}
-                </h2>
-                <p className="font-sans text-sm text-[#FFFFFF]/80">
-                  This chapter is complete — everything below is ready to learn right now. The video companion walks through all of it, plus the build, when it lands.
-                </p>
-              </div>
-              <a href="https://youtube.com/@behumoury" target="_blank" rel="noopener noreferrer" className="bg-[#C6FF3F] text-[#0A0A0A] font-mono text-sm uppercase px-6 py-3 tracking-widest font-bold whitespace-nowrap hover:bg-[#b0f224] transition-colors border border-[#0A0A0A] inline-block text-center">
-                SUBSCRIBE ↗
-              </a>
-            </div>
-          )}
-        </section>
+          </section>
+        )}
 
         {/* Syllabus */}
         {chapter.groups.length > 0 && (
